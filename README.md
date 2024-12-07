@@ -12,7 +12,7 @@ Bu layihə, verilmiş server log faylını analiz edərək uğursuz giriş cəhd
 1. **Layihəni yükləyin:**
    GitHub-da layihə səhifənizdən layihəni yükləyin:
    ```bash
-   git clone https://github.com/sizin-username/lab1.git
+   git clone https://github.com/revan-aliyev/python-lab-log-analysis.git
    cd lab1
 2. **Virtual mühit yaradın və aktivləşdirin:**
    Layihənin asılılıqlarını izolyasiya etmək üçün virtual mühit yaradın:
