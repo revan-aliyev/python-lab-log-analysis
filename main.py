@@ -43,7 +43,7 @@ failed_logins = {ip: count for ip, count in ip_counts.items() if count > 5}
 with open(failed_logins_json, 'w') as file:
     json.dump(failed_logins, file, indent=4)
 
-# 3. Təhdid kəşfiyyatı ilə uyğunluq (məsələn, sadə nümunə kimi bəzi IP-lər əlavə edilib)
+# 3. Təhdid kəşfiyyatı ilə uyğunluq 
 threat_intel = ["192.168.1.11", "10.0.0.15","172.138.43.58","86.124.105,68"]
 threat_matches = [ip for ip in threat_intel if ip in ip_counts]
 with open(threat_ips_json, 'w') as file:
