@@ -18,13 +18,13 @@ Bu layihə, verilmiş server log faylını analiz edərək uğursuz giriş cəhd
    cd python-lab-log-analysis
 2. **Virtual mühit yaradın və aktivləşdirin:**
    Layihənin asılılıqlarını izolyasiya etmək üçün virtual mühit yaradın:
-
+   ```bash
    python -m venv venv
 
    venv\Scripts\activate  # Windows üçün
 3. **Kitabxanaları quraşdırın:**
    Layihənin işləməsi üçün lazım olan kitabxanaları requirements.txt faylından quraşdırın:
-
+   ```bash
    pip freeze > requirements.txt
 
    python -m pip install --upgrade pip
@@ -32,7 +32,7 @@ Bu layihə, verilmiş server log faylını analiz edərək uğursuz giriş cəhd
    pip install -r requirements.txt
 4. **Skripti işə salın:**
    Log faylını analiz etmək üçün aşağıdakı əmri icra edin:
-
+   ```bash
    python main.py
 
 Layihə Strukturunun Təsviri
@@ -44,7 +44,7 @@ question.txt: Tapşırıq sualları və tapşırıq detalları.
 
 requirements.txt: Layihənin işləməsi üçün lazım olan kitabxanalar.
 
-failed_logins.json: 5-dən çox uğursuz giriş cəhdi olan IP-lərin siyahısı.
+failed_logins.json: 3-dən çox uğursuz giriş cəhdi olan IP-lərin siyahısı.
 
 threat_ips.json: Təhlükəli IP-lərin siyahısı.
 
