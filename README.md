@@ -22,6 +22,8 @@ Bu layihə, verilmiş server log faylını analiz edərək uğursuz giriş cəhd
    python -m venv venv
 
    venv\Scripts\activate  # Windows üçün
+   source venv/bin/activate #macOS/Linux üçün
+   
 3. **Kitabxanaları quraşdırın:**
    Layihənin işləməsi üçün lazım olan kitabxanaları requirements.txt faylından quraşdırın:
    ```bash
