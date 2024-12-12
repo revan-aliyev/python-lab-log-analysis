@@ -76,13 +76,14 @@ failed_logins = {ip: count for ip, count in ip_counts.items() if count > 3}
 write_json(failed_logins_json, failed_logins)
 
 # Təhdid kəşfiyyatı ilə uyğunluq 
-threat_intel = ["192.168.1.11", "10.0.0.15", "172.138.43.58", "86.124.105,68", "10.0.6.15"]
+threat_intel = ["192.168.1.11", "10.0.0.15", "172.138.43.58", "86.124.105,68"]
 threat_matches = [ip for ip in threat_intel if ip in ip_counts]
 write_json(threat_ips_json, threat_matches)
 
 # Uğursuz girişlər və təhdidlər birləşdirilir
+combined_failed_logins = {ip: count for ip, count in ip_counts.items() if count > 0}
 combined_data = {
-    "failed_logins": failed_logins,
+    "failed_logins": combined_failed_logins,
     "threat_matches": threat_matches
 }
 write_json(combined_security_data_json, combined_data)
