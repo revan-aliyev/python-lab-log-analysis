@@ -71,7 +71,7 @@ logs = read_logs(log_file)
 # Məlumat çıxar
 extracted_data, ip_counts = extract_data(logs)
 
-# 5-dən çox uğursuz giriş cəhdi olan IP-ləri JSON-a yaz
+# 3-dən çox uğursuz giriş cəhdi olan IP-ləri JSON-a yaz
 failed_logins = {ip: count for ip, count in ip_counts.items() if count > 3}
 write_json(failed_logins_json, failed_logins)
 
